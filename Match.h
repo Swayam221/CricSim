@@ -35,25 +35,24 @@ public:
 				{
 					curBatsman = &batsman2;
 					//cout << batsman2.name << " is batting" << "\n";
-
 				}
 				else
 				{
 					curBatsman = &batsman1;
 					//cout << batsman1.name << " is batting" << "\n";
-
 				}
 
 				bowler = team1->getBowler();
 				//cout << bowler.name << " is bowling" << "\n";
-
 			}
+
 			int runs = 0;
+			team2->ballsFaced++;
+			
 			if (bowler.takesWicket())
 			{
 				bowler.wicketsTaken++;
 				//cout << bowler.name << " outs " << curBatsman->name << "\n";
-
 
 				*curBatsman = team2->getBatsman();
 				team2->wicketsLost++;
@@ -61,8 +60,11 @@ public:
 			else
 			{
 				runs = curBatsman->bats();
+
 				curBatsman->runsScored += runs;
 				team2->runsScored += runs;
+				bowler.runsGiven += runs;
+				
 				//cout << curBatsman->name << " scores " << runs<<"\n";
 				if (runs == 1)
 				{

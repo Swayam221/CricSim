@@ -113,26 +113,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Cricket-Simulator\Cricket Simulator\Match.h" />
-    <ClInclude Include="D:\Cricket-Simulator\Cricket Simulator\Player.h" />
-    <ClInclude Include="D:\Cricket-Simulator\Cricket Simulator\Team.h" />
-    <ClInclude Include="MyForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="D:\Cricket-Simulator\Cricket Simulator\Match.cpp" />
-    <ClCompile Include="D:\Cricket-Simulator\Cricket Simulator\Player.cpp" />
-    <ClCompile Include="D:\Cricket-Simulator\Cricket Simulator\Team.cpp" />
-    <ClCompile Include="D:\Cricket-Simulator\Cricket Simulator\Tester.cpp" />
-    <ClCompile Include="MyForm.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Match.h" />
+    <ClInclude Include="MyForm.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Team.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Match.cpp" />
+    <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Team.cpp" />
+    <ClCompile Include="Tester.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

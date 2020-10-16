@@ -9,4 +9,3 @@ void main(cli::array<String^>^ args)
 	CricSim::MyForm form;
 	Application::Run(% form);
 }
-

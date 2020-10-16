@@ -1,4 +1,4 @@
-#pragma once
+/*#pragma once
 #include "Player.h"
 #include <iostream>
 #include "Team.h"
@@ -60,7 +60,7 @@ void testMatch() {
 	cout << match2.team2->wicketsLost << "\n";
 }
 
-/*int main() {
+int main() {
 	srand((unsigned)time(0));
 	//testTeam(Team("MI"));
 	//testPlayer(player);

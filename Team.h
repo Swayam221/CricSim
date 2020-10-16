@@ -20,8 +20,6 @@ class Team {
 	int wickets;
 	string temp;
 
-	
-
 public:
 	string name;
 	int bowlerInd = -1;
@@ -31,6 +29,7 @@ public:
 
 	int runsScored = 0;
 	int wicketsLost = 0;
+	int ballsFaced = 0;
 
 	Team() {}
 	Team(string teamName) {
@@ -89,5 +88,24 @@ public:
 	Player getBatsman() {
 		batsmanInd += 1;
 		return batting.at(batsmanInd % batting.size());
+	}
+
+	void getAvgResults(int n) {
+		int runsScored = runsScored/n;
+		int wicketsLost = wicketsLost/n;
+		int ballsFaced = ballsFaced/n;
+
+		for (int i = 0; i < 11; i++) {
+			//batsman
+			batting[i].foursScored = batting[i].foursScored/n;
+			batting[i].sixesScored = batting[i].sixesScored/n;
+			batting[i].runsScored = batting[i].runsScored/n;
+			batting[i].ballsBatted = batting[i].ballsBatted/n;
+
+			//bowler
+			batting[i].wicketsTaken = batting[i].wicketsTaken/n;
+			batting[i].ballsBowled = batting[i].ballsBowled/n;
+			batting[i].runsGiven = batting[i].runsGiven/n;
+		}
 	}
 };
